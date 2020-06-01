@@ -1,0 +1,139 @@
+@import "./reset";
+@import "./colors";
+@import "./fonts";
+@import "./loader";
+p {
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+.wrapper {
+    padding: 20px 0;
+    @media only screen and (min-width: 1024px) {
+        padding: 20px;
+    }
+}
+.main {
+    width: 100%;
+    margin: 30px auto 0 auto;
+    background-color: $ligth-white1;
+    a {
+        text-decoration: none;
+        color: $black-color;
+    }
+}
+
+.thead {
+    background-color: $light-red;
+    padding: 10px 0;
+}
+.logo {
+    img {
+        border: solid 1px $white-color;
+        vertical-align: middle;
+        margin: 0 20px 0 10px;
+    }
+}
+.top-news,
+.latest-news {
+    font-size: 16px;
+}
+
+a.selected {
+    color: $white-color;
+}
+.seperator {
+    border-right: 1px solid $black-color;
+    margin: 0 8px;
+}
+
+.home-page {
+    .row {
+        display: block;
+    }
+}
+
+.tbody {
+    div.row:nth-child(even) {
+        background-color: $ligth-white2;
+    }
+}
+.row {
+    display: flex;
+    padding: 10px 5px;
+    @media screen and (min-width: 1024px) {
+        padding: 10px;
+    }
+    div {
+        padding: 0 5px;
+    }
+    .comment,
+    .t-vote {
+        width: 5%;
+        text-align: right;
+        font-size: 14px;
+    }
+    div.votelinks {
+        width: 20px;
+        a {
+            display: block;
+        }
+    }
+    div.title {
+        .title-h2 {
+            font-size: 15px;
+        }
+        .sitebit,
+        .author {
+            color: $grey-color3;
+        }
+        .sitebit {
+            a {
+                color: $grey-color1;
+            }
+        }
+        .author span,
+        .hide span {
+            color: $black-color;
+        }
+        .created,
+        .hide {
+            color: $grey-color1;
+        }
+    }
+}
+
+.votearrow {
+    background-size: 10px;
+    height: 10px;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    &.up {
+        background-image: url("/images/grayarrow2x.gif");
+    }
+    &.down {
+        background-image: url("/images/grayarrow2x.gif");
+        transform: rotate(180deg);
+    }
+}
+
+.more-link {
+    padding: 20px 0;
+    span {
+        margin-left: calc(10% + 65px);
+        a {
+            color: $light-red;
+        }
+    }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1024px) {
+    .main {
+        width: 90%;
+    }
+    .votearrow {
+        background-size: 15px;
+        height: 15px;
+    }
+}
